@@ -4,18 +4,11 @@
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
-    "@eslint/js": "9.33.0",
-    "@next/eslint-plugin-next": "^15.5.4",
-    "@trivago/prettier-plugin-sort-imports": "5.2.2",
+    "@biomejs/biome": "^1.9.0",
     "@types/node": "^22.0.0",
-    "eslint": "9.33.0",
-    "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-react-hooks": "5.2.0",
-    "prettier": "3.5.3",
     "syncpack": "^13.0.4",
     "turbo": "^1.10.0",
-    "typescript": "5.9.2",
-    "typescript-eslint": "8.39.0"
+    "typescript": "5.9.2"
   },
   "engines": {
     "node": ">=22.0.0",
@@ -27,12 +20,13 @@
     "build": "turbo run build",
     "clean": "turbo run clean && rm -rf node_modules",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
     "syncpack:format": "syncpack format",
     "test": "turbo run test"
   },
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ]
+  "workspaces": ["packages/*", "apps/*"]
 }

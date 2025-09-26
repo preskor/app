@@ -7,7 +7,6 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.5.4",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^22.0.0",
     "@types/react": "^19",
@@ -20,7 +19,9 @@
     "build": "next build",
     "clean": "rm -rf .next dist",
     "dev": "next dev",
-    "lint": "next lint",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check .",
     "start": "next start"
   }
 }
