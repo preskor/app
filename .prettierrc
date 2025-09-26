@@ -1,0 +1,30 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "tabWidth": 4,
+  "printWidth": 80,
+  "importOrder": ["^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderParserPlugins": [
+    "classProperties",
+    "typescript",
+    "decorators-legacy",
+    "jsx"
+  ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "overrides": [
+    {
+      "files": ["*.json", "*.graphql", "*.yaml", "*.yml"],
+      "options": {
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.sol",
+      "options": {
+        "printWidth": 100
+      }
+    }
+  ]
+}

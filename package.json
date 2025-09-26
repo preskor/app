@@ -1,0 +1,38 @@
+{
+  "name": "preskor",
+  "description": "Web-first crypto football prediction market app",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@eslint/js": "9.33.0",
+    "@next/eslint-plugin-next": "^15.5.4",
+    "@trivago/prettier-plugin-sort-imports": "5.2.2",
+    "@types/node": "^22.0.0",
+    "eslint": "9.33.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "prettier": "3.5.3",
+    "syncpack": "^13.0.4",
+    "turbo": "^1.10.0",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.39.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "yarn": ">=1.21.19"
+  },
+  "packageManager": "yarn@1.21.19",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "syncpack:format": "syncpack format",
+    "test": "turbo run test"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
+}

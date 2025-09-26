@@ -1,0 +1,24 @@
+{
+  "eslint.enable": true,
+  "eslint.workingDirectories": [
+    {
+      "directory": ".",
+      "changeProcessCWD": true
+    }
+  ],
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
+}

@@ -1,0 +1,9 @@
+**/node_modules
+.github
+**/.idea
+**/.next
+.vscode
+**/build
+**/coverage
+**/dist
+**/.next

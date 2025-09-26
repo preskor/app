@@ -1,0 +1,26 @@
+{
+  "name": "@preskor/web",
+  "version": "0.1.0",
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^15.5.4",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "5.9.2"
+  },
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "clean": "rm -rf .next dist",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  }
+}
