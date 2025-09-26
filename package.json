@@ -5,7 +5,10 @@
   "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "^1.9.0",
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@types/node": "^22.0.0",
+    "husky": "^9.1.7",
     "syncpack": "^13.0.4",
     "turbo": "^1.10.0",
     "typescript": "5.9.2"
@@ -26,7 +29,11 @@
     "check": "biome check .",
     "check:fix": "biome check --write .",
     "syncpack:format": "syncpack format",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "prepare": "husky"
   },
-  "workspaces": ["packages/*", "apps/*"]
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
 }
