@@ -26,7 +26,7 @@
     "@types/chai": "^5.2.2",
     "@types/node": "^22.0.0",
     "chai": "^6.2.0",
-    "forge-std": "^1.11.0",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.7",
     "hardhat": "^3.0.7",
     "hardhat-gas-reporter": "^2.3.0",
     "solidity-coverage": "^0.8.16",
