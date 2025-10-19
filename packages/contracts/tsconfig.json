@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "lib": ["es2023"],
+    "module": "node16",
+    "target": "es2023",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "moduleResolution": "node16",
+    "outDir": "dist",
+    "types": ["node"]
+  },
+  "exclude": ["node_modules", "dist", "artifacts", "cache"]
+}

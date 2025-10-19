@@ -1,0 +1,37 @@
+{
+  "name": "@preskor/contracts",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "hardhat build",
+    "test": "hardhat test solidity",
+    "deploy": "hardhat ignition deploy",
+    "clean": "hardhat clean"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.0.3",
+    "@nomicfoundation/hardhat-ignition-viem": "^3.0.3",
+    "@nomicfoundation/hardhat-keystore": "^3.0.1",
+    "@nomicfoundation/hardhat-network-helpers": "^3.0.1",
+    "@nomicfoundation/hardhat-node-test-runner": "^3.0.3",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^3.0.3",
+    "@nomicfoundation/hardhat-viem": "^3.0.0",
+    "@nomicfoundation/hardhat-viem-assertions": "^3.0.2",
+    "@nomicfoundation/ignition-core": "^3.0.3",
+    "@types/chai": "^5.2.2",
+    "@types/node": "^22.0.0",
+    "chai": "^6.2.0",
+    "forge-std": "^1.11.0",
+    "hardhat": "^3.0.7",
+    "hardhat-gas-reporter": "^2.3.0",
+    "solidity-coverage": "^0.8.16",
+    "ts-node": "^10.9.2",
+    "typescript": "5.9.2",
+    "viem": "^2.38.3"
+  }
+}

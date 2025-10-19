@@ -37,7 +37,9 @@
         "noExtraBooleanCast": "error",
         "noMultipleSpacesInRegularExpressionLiterals": "error",
         "noUselessCatch": "error",
-        "noUselessTypeConstraint": "error"
+        "noUselessTypeConstraint": "error",
+        "noStaticOnlyClass": "off",
+        "noThisInStatic": "off"
       },
       "correctness": {
         "noConstAssign": "error",
@@ -54,11 +56,14 @@
         "noSwitchDeclarations": "error",
         "noUndeclaredVariables": "error",
         "noUnreachable": "error",
-        "noUnreachableSuper": "error"
+        "noUnreachableSuper": "error",
+        "noUnusedImports": "warn",
+        "noUnusedVariables": "warn"
       },
       "style": {
         "noNamespace": "error",
-        "useAsConstAssertion": "error"
+        "useAsConstAssertion": "error",
+        "noUselessElse": "off"
       },
       "suspicious": {
         "noAsyncPromiseExecutor": "error",
@@ -86,7 +91,8 @@
         "noUnsafeDeclarationMerging": "error",
         "noUnsafeNegation": "error",
         "useGetterReturn": "error",
-        "useValidTypeof": "error"
+        "useValidTypeof": "error",
+        "noArrayIndexKey": "off"
       }
     }
   },
