@@ -13,6 +13,7 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "radix-themes-tw": "^1.1.0",
     "tailwindcss": "^4",
     "typescript": "5.9.2"
   },

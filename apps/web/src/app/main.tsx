@@ -7,9 +7,5 @@ type MainProps = {
 };
 
 export default function Main({ children }: MainProps) {
-  return (
-    <Theme accentColor="teal" appearance="light">
-      {children}
-    </Theme>
-  );
+  return <Theme accentColor="teal">{children}</Theme>;
 }

@@ -1,4 +1,9 @@
-@import "tailwindcss";
+@layer theme, base, radix-themes, components, utilities;
+
+@import "tailwindcss"; /* <-- import the tailwind styles (they have theme, base, components, utilities layers already assigned) */
+@import "@radix-ui/themes/styles.css" layer(radix-themes); /* <-- import the radix-themes styles */
+
+@import "radix-themes-tw/theme.css"; /* <-- import the preset */
 
 :root {
   --background: #ffffff;
@@ -7,15 +12,19 @@
 }
 
 @theme inline {
+  --font-inter: "Inter", system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+.radix-themes {
+  --default-font-family: var(--font-sans);
 }
