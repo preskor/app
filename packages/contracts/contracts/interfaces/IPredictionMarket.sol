@@ -90,6 +90,10 @@ interface IPredictionMarket {
 
     // Team Management
     function createTeam(string calldata name, string calldata metadata) external returns (uint256);
+    function createBulkTeams(
+        string[] calldata names,
+        string[] calldata metadataList
+    ) external returns (uint256[] memory);
     function updateTeam(uint256 teamId, string calldata name, string calldata metadata) external;
     function getTeam(uint256 teamId) external view returns (Team memory);
 

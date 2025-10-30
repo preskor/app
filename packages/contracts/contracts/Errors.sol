@@ -50,5 +50,9 @@ library Errors {
     // ============ Setup Errors ============
     error BettingEngineAlreadySet();
     error BettingEngineNotSet();
+
+    // ============ Bulk Operation Errors ============
+    error ArrayLengthMismatch();
+    error BatchSizeTooLarge();
 }
 

@@ -17,6 +17,7 @@ contract TeamManager is AccessControl {
     mapping(uint256 => IPredictionMarket.Team) private _teams;
 
     event TeamCreated(uint256 indexed teamId, string name, string metadata);
+    event TeamsCreated(uint256[] teamIds, string[] names, string[] metadataList);
     event TeamUpdated(uint256 indexed teamId, string name, string metadata);
 
     constructor() {
@@ -48,6 +49,48 @@ contract TeamManager is AccessControl {
 
         emit TeamCreated(teamId, name, metadata);
         return teamId;
+    }
+
+    /**
+     * @notice Create multiple teams in a single transaction
+     * @param names Array of team names
+     * @param metadataList Array of metadata strings (IPFS hashes or external references)
+     * @return Array of created team IDs
+     */
+    function createBulkTeams(
+        string[] calldata names,
+        string[] calldata metadataList
+    ) external onlyRole(ADMIN_ROLE) returns (uint256[] memory) {
+        uint256 length = names.length;
+        if (length != metadataList.length) revert Errors.ArrayLengthMismatch();
+        if (length == 0) revert Errors.TeamNameRequired(); // At least one team required
+        if (length > 50) revert Errors.BatchSizeTooLarge(); // Reasonable batch limit
+
+        uint256[] memory teamIds = new uint256[](length);
+        uint256 currentCounter = _teamIdCounter;
+
+        for (uint256 i = 0; i < length; i++) {
+            if (bytes(names[i]).length == 0) revert Errors.TeamNameRequired();
+
+            currentCounter++;
+            uint256 teamId = currentCounter;
+
+            _teams[teamId] = IPredictionMarket.Team({
+                id: teamId,
+                name: names[i],
+                metadata: metadataList[i],
+                exists: true
+            });
+
+            teamIds[i] = teamId;
+
+            emit TeamCreated(teamId, names[i], metadataList[i]);
+        }
+
+        _teamIdCounter = currentCounter;
+
+        emit TeamsCreated(teamIds, names, metadataList);
+        return teamIds;
     }
 
     /**

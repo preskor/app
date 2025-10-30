@@ -1,14 +1,6 @@
 {
   "name": "@preskor/contracts",
   "version": "1.0.0",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "build": "hardhat build",
-    "test": "hardhat test solidity",
-    "deploy": "hardhat ignition deploy",
-    "clean": "hardhat clean"
-  },
   "dependencies": {
     "@openzeppelin/contracts": "^5.4.0"
   },
@@ -33,5 +25,14 @@
     "ts-node": "^10.9.2",
     "typescript": "5.9.2",
     "viem": "^2.38.3"
-  }
+  },
+  "private": true,
+  "scripts": {
+    "build": "hardhat build",
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "deploy": "hardhat ignition deploy",
+    "test": "hardhat test solidity"
+  },
+  "type": "module"
 }

@@ -20,11 +20,11 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "check": "biome check .",
     "clean": "rm -rf .next dist",
     "dev": "next dev",
-    "lint": "biome lint .",
     "format": "biome format --write .",
-    "check": "biome check .",
+    "lint": "biome lint .",
     "start": "next start"
   }
 }

@@ -42,6 +42,13 @@ contract PredictionMarket is IPredictionMarket, AccessControl {
         return teamManager.createTeam(name, metadata);
     }
 
+    function createBulkTeams(
+        string[] calldata names,
+        string[] calldata metadataList
+    ) external override onlyRole(ADMIN_ROLE) returns (uint256[] memory) {
+        return teamManager.createBulkTeams(names, metadataList);
+    }
+
     function updateTeam(
         uint256 teamId,
         string calldata name,
